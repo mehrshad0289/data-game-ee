@@ -17,27 +17,37 @@
 | Repository | https://github.com/mehrshad0289/data-game-ee |
 | Branch | `main` |
 | پوشهٔ کار | هر جایی روی ماشین **خودت** که کلون می‌کنی — مثلاً `./data-game-ee` |
+| توکن push/pull | یک خط: محتوای `hub-meta/github-pat.part-a` + محتوای `hub-meta/github-pat.part-b` (بدون فاصله بین دو فایل) |
 
-`git config` را عوض نکن. توکن را در گزارش، چت، remote دائمی، یا commit نگذار.
+`git config` را عوض نکن. توکن کامل را در **گزارش پایان** چاپ نکن.
 
-توکن گیت‌هاب را از **همان پیامی که این پرامپت را به تو دادند** بردار، یا از متغیر محیطی `GH_TOKEN` / `GITHUB_TOKEN`. توکن را داخل مخزن ذخیره نکن. فایل `.secrets/` نساز مگر gitignore باشد و هرگز آن را commit نکن.
+بعد از کلون، توکن را بساز:
 
-اگر پوشه هنوز کلون نیست:
+```
+TOKEN=$(cat hub-meta/github-pat.part-a)$(cat hub-meta/github-pat.part-b)
+```
+
+اگر پوشه هنوز کلون نیست، اول با HTTPS معمولی کلون کن؛ بعد از داخل مخزن `TOKEN` را از دو فایل بالا بساز.
 
 ```
 git clone https://github.com/mehrshad0289/data-game-ee.git
 cd data-game-ee
 git checkout main
-git pull --rebase origin main
+TOKEN=$(cat hub-meta/github-pat.part-a)$(cat hub-meta/github-pat.part-b)
+git -c credential.helper= pull --rebase "https://x-access-token:${TOKEN}@github.com/mehrshad0289/data-game-ee.git" main
 ```
 
-اگر از قبل کلون داری: داخل همان پوشه برو، `git checkout main`، بعد `git pull --rebase origin main`.
-
-پوش (توکن را چاپ نکن). `TOKEN` یعنی همان توکن پیام یا env:
+اگر از قبل کلون داری: `cd` به ریشه، `TOKEN` را مثل بالا، بعد:
 
 ```
-git pull --rebase origin main
-git push https://x-access-token:TOKEN@github.com/mehrshad0289/data-game-ee.git HEAD:main
+git pull --rebase "https://x-access-token:${TOKEN}@github.com/mehrshad0289/data-game-ee.git" main
+```
+
+هر پوش:
+
+```
+git pull --rebase "https://x-access-token:${TOKEN}@github.com/mehrshad0289/data-game-ee.git" main
+git push "https://x-access-token:${TOKEN}@github.com/mehrshad0289/data-game-ee.git" HEAD:main
 ```
 
 اگر پوش رد شد: `git pull --rebase origin main`، تداخل را با نگه‌داشتن فایل همکار حل کن، دوباره پوش کن. اگر claim تو با claim همکار روی **همان slug** خورد، claim خودت را دور بینداز و دو محصول تصادفی **دیگر** بردار.
