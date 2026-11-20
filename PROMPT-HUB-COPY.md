@@ -2,48 +2,49 @@
 
 این فایل را بخوان و **همین الان اجرا کن**. سؤال نپرس. صبر نکن.
 
+روی این کامپیوتر هلن کار نمی‌کنی. مسیر ویندوز کسی را حدس نزن. مخزن را **خودت** از گیت‌هاب روی **همین ماشین خودت** کلون کن و همان‌جا کار کن.
+
 هر بار **دقیقاً دو محصول تصادفی**. هر محصول همهٔ هاب‌هایش. بعد از هر فایل **فوری پوش**. بعد از این دو محصول **توقف**. محصول سوم را شروع نکن.
 
 یک همکار همزمان روی `main` کار می‌کند. انتخاب **رندم** است. قبل از تحقیق claim را پوش کن. فایل همکار را بازنویس نکن. force-push نزن.
 
 ---
 
-## گیت‌هاب — خودت وصل شو و خودت پول و پوش کن
+## گیت‌هاب — خودت کلون کن، خودت پول و پوش کن
 
 | | |
 |---|---|
 | Repository | https://github.com/mehrshad0289/data-game-ee |
 | Branch | `main` |
-| مسیر | `C:\Users\Asus\Desktop\charjino\data-game-ee` |
-| توکن | یک خط داخل `C:\Users\Asus\Desktop\charjino\data-game-ee\.secrets\github.token` |
+| پوشهٔ کار | هر جایی روی ماشین **خودت** که کلون می‌کنی — مثلاً `./data-game-ee` |
 
-`git config` را عوض نکن. توکن را در گزارش، چت، remote دائمی، یا commit نگذار. `.secrets/` در gitignore است.
+`git config` را عوض نکن. توکن را در گزارش، چت، remote دائمی، یا commit نگذار.
 
-PowerShell از همان پوشه:
+توکن گیت‌هاب را از **همان پیامی که این پرامپت را به تو دادند** بردار، یا از متغیر محیطی `GH_TOKEN` / `GITHUB_TOKEN`. توکن را داخل مخزن ذخیره نکن. فایل `.secrets/` نساز مگر gitignore باشد و هرگز آن را commit نکن.
 
-```powershell
-cd C:\Users\Asus\Desktop\charjino\data-game-ee
+اگر پوشه هنوز کلون نیست:
+
+```
+git clone https://github.com/mehrshad0289/data-game-ee.git
+cd data-game-ee
 git checkout main
-git remote set-url origin https://github.com/mehrshad0289/data-game-ee.git
-git fetch origin
 git pull --rebase origin main
 ```
 
-پوش (هر بار همین الگو؛ توکن را چاپ نکن):
+اگر از قبل کلون داری: داخل همان پوشه برو، `git checkout main`، بعد `git pull --rebase origin main`.
 
-```powershell
-$ask = Join-Path $env:TEMP 'data-game-ee-ask.cmd'
-Set-Content -Path $ask -Encoding ascii -Value "@echo off`r`ntype `"C:\Users\Asus\Desktop\charjino\data-game-ee\.secrets\github.token`""
-$env:GIT_ASKPASS = $ask
-$env:GIT_TERMINAL_PROMPT = '0'
-git -c credential.helper= pull --rebase origin main
-git -c credential.helper= push "https://x-access-token@github.com/mehrshad0289/data-game-ee.git" HEAD:main
-Remove-Item $ask -Force
+پوش (توکن را چاپ نکن). `TOKEN` یعنی همان توکن پیام یا env:
+
+```
+git pull --rebase origin main
+git push https://x-access-token:TOKEN@github.com/mehrshad0289/data-game-ee.git HEAD:main
 ```
 
 اگر پوش رد شد: `git pull --rebase origin main`، تداخل را با نگه‌داشتن فایل همکار حل کن، دوباره پوش کن. اگر claim تو با claim همکار روی **همان slug** خورد، claim خودت را دور بینداز و دو محصول تصادفی **دیگر** بردار.
 
 منبع حقیقت GitHub `main` است، نه حافظه.
+
+PHP را از ریشهٔ کلون صدا بزن: `php tools/hub-pick.php` و `php tools/hub-status.php`.
 
 ---
 
@@ -58,7 +59,7 @@ Remove-Item $ask -Force
 
 بعد از هر `done` این را بزن و `PROGRESS.md` را در همان commit تمام‌شدن بگذار:
 
-```powershell
+```
 php tools/hub-status.php
 ```
 
@@ -66,13 +67,15 @@ php tools/hub-status.php
 
 `fazerTypes` داخل JSON صف می‌گوید روی دیتابیس شارژینو `topup` / `giftcard` / `gamekey` دارد. همهٔ محصولات صف باید پوشش داده شوند. محصول بدون صفحهٔ الدورادو هم تمام می‌شود: `missing.json`، بعد حذف از صف.
 
+مسیر `workbook` داخل JSON صف نسبی است و داخل همین کلون است؛ مثلاً `games-completed/<folder>/<folder>.xlsx`.
+
 ---
 
 ## انتخاب رندم — دقیقاً دو تا
 
 بعد از `git pull --rebase origin main`:
 
-```powershell
+```
 php tools/hub-pick.php
 ```
 
@@ -163,11 +166,11 @@ NEXT PARAGRAPH COPIED FROM THE PAGE
 
 توضیح را قبل از پوش سوال ننویس. تا پوش این قدم موفق نشده قدم بعد را شروع نکن.
 
-1. وصل شو به گیت‌هاب. `main` را پول کن.
+1. مخزن را روی ماشین خودت کلون کن (یا پول کن). `main`.
 2. `php tools/hub-pick.php` — دو محصول تصادفی.
 3. commit و **پوش claim**. تحقیق نکن تا پوش claim موفق شود.
 4. محصول اول:
-   1. اسم انگلیسی از سلول «نام کانونیکال» همان xlsx؛ اگر xlsx نیست از `name` صف.
+   1. اسم انگلیسی از سلول «نام کانونیکال» همان xlsx داخل کلون؛ اگر xlsx نیست از `name` صف.
    2. در https://www.eldorado.gg/ همان اسم را جستجو کن.
    3. هاب‌ها به ترتیب `accounts`، `currency`، `items`، `top-ups`، `gift-cards`.
    4. هر هاب: صفحه را باز کن. نیست → `missing.json`، commit، پوش. هست → `faq.json`، commit، پوش، بعد `description.txt`، commit، پوش. تا پوش این هاب تمام نشده هاب بعد را شروع نکن.
@@ -208,9 +211,8 @@ NEXT PARAGRAPH COPIED FROM THE PAGE
 
 # شروع
 
-1. `cd C:\Users\Asus\Desktop\charjino\data-game-ee`
-2. به https://github.com/mehrshad0289/data-game-ee روی `main` وصل شو و پول کن.
-3. دو محصول تصادفی را با `php tools/hub-pick.php` بردار و claim را پوش کن.
-4. محصول اول را هاب‌به‌هاب جمع کن؛ بعد از هر faq یا missing پوش کن؛ بعد توضیحات را پوش کن؛ بعد از صف حذف کن، `PROGRESS.md` را به‌روز کن، پوش کن.
-5. محصول دوم، همان کار.
-6. گزارش و توقف.
+1. `git clone https://github.com/mehrshad0289/data-game-ee.git` روی ماشین خودت (اگر کلون داری فقط پول کن). `cd` به ریشهٔ کلون. `main`.
+2. دو محصول تصادفی را با `php tools/hub-pick.php` بردار و claim را پوش کن.
+3. محصول اول را هاب‌به‌هاب جمع کن؛ بعد از هر faq یا missing پوش کن؛ بعد توضیحات را پوش کن؛ بعد از صف حذف کن، `PROGRESS.md` را به‌روز کن، پوش کن.
+4. محصول دوم، همان کار.
+5. گزارش و توقف.
