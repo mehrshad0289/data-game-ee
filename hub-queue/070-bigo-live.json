@@ -1,0 +1,10 @@
+{
+    "slug": "070-bigo-live",
+    "name": "Bigo Live",
+    "source": "games-completed",
+    "fazerTypes": [
+        "giftcard",
+        "topup"
+    ],
+    "workbook": "games-completed/070-bigo-live/070-bigo-live.xlsx"
+}

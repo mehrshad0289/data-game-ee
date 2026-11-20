@@ -1,0 +1,9 @@
+{
+    "slug": "kingshot",
+    "name": "Kingshot",
+    "source": "games-completed",
+    "fazerTypes": [
+        "topup"
+    ],
+    "workbook": "games-completed/kingshot/kingshot.xlsx"
+}

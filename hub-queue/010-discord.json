@@ -1,0 +1,9 @@
+{
+    "slug": "010-discord",
+    "name": "Discord",
+    "source": "games-completed",
+    "fazerTypes": [
+        "giftcard"
+    ],
+    "workbook": "games-completed/010-discord/010-discord.xlsx"
+}

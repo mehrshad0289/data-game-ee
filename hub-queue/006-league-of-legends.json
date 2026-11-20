@@ -1,0 +1,9 @@
+{
+    "slug": "006-league-of-legends",
+    "name": "League of Legends",
+    "source": "games-completed",
+    "fazerTypes": [
+        "giftcard"
+    ],
+    "workbook": "games-completed/006-league-of-legends/006-league-of-legends.xlsx"
+}

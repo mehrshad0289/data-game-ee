@@ -1,0 +1,8 @@
+{
+    "slug": "qq-coin-qb-direct",
+    "name": "QQ Coin Qb Direct",
+    "source": "fazer",
+    "fazerTypes": [
+        "topup"
+    ]
+}

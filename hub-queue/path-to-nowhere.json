@@ -1,0 +1,8 @@
+{
+    "slug": "path-to-nowhere",
+    "name": "Path To Nowhere",
+    "source": "fazer",
+    "fazerTypes": [
+        "topup"
+    ]
+}

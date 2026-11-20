@@ -1,0 +1,9 @@
+{
+    "slug": "283-point-blank",
+    "name": "Point Blank",
+    "source": "games-completed",
+    "fazerTypes": [
+        "topup"
+    ],
+    "workbook": "games-completed/283-point-blank/283-point-blank.xlsx"
+}

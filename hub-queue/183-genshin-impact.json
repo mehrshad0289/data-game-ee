@@ -1,0 +1,9 @@
+{
+    "slug": "183-genshin-impact",
+    "name": "Genshin Impact",
+    "source": "games-completed",
+    "fazerTypes": [
+        "topup"
+    ],
+    "workbook": "games-completed/183-genshin-impact/183-genshin-impact.xlsx"
+}

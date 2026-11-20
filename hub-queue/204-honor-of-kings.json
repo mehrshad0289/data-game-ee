@@ -1,0 +1,9 @@
+{
+    "slug": "204-honor-of-kings",
+    "name": "Honor of Kings",
+    "source": "games-completed",
+    "fazerTypes": [
+        "topup"
+    ],
+    "workbook": "games-completed/204-honor-of-kings/204-honor-of-kings.xlsx"
+}

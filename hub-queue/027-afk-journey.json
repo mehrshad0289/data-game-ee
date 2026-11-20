@@ -1,0 +1,9 @@
+{
+    "slug": "027-afk-journey",
+    "name": "AFK Journey",
+    "source": "games-completed",
+    "fazerTypes": [
+        "topup"
+    ],
+    "workbook": "games-completed/027-afk-journey/027-afk-journey.xlsx"
+}

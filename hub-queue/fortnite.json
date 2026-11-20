@@ -1,0 +1,9 @@
+{
+    "slug": "fortnite",
+    "name": "Fortnite",
+    "source": "games-completed",
+    "fazerTypes": [
+        "giftcard"
+    ],
+    "workbook": "games-completed/fortnite/fortnite.xlsx"
+}

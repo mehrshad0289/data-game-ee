@@ -1,0 +1,9 @@
+{
+    "slug": "051-apex-legends",
+    "name": "Apex Legends",
+    "source": "games-completed",
+    "fazerTypes": [
+        "giftcard"
+    ],
+    "workbook": "games-completed/051-apex-legends/051-apex-legends.xlsx"
+}

@@ -1,0 +1,10 @@
+{
+    "slug": "054-arena-breakout",
+    "name": "Arena Breakout",
+    "source": "games-completed",
+    "fazerTypes": [
+        "giftcard",
+        "topup"
+    ],
+    "workbook": "games-completed/054-arena-breakout/054-arena-breakout.xlsx"
+}

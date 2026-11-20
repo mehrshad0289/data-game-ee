@@ -1,0 +1,9 @@
+{
+    "slug": "076-bleach-soul-resonance",
+    "name": "Bleach Soul Resonance",
+    "source": "games-completed",
+    "fazerTypes": [
+        "topup"
+    ],
+    "workbook": "games-completed/076-bleach-soul-resonance/076-bleach-soul-resonance.xlsx"
+}

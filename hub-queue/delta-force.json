@@ -1,0 +1,9 @@
+{
+    "slug": "delta-force",
+    "name": "Delta Force",
+    "source": "games-completed",
+    "fazerTypes": [
+        "topup"
+    ],
+    "workbook": "games-completed/delta-force/delta-force.xlsx"
+}

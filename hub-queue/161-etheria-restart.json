@@ -1,0 +1,9 @@
+{
+    "slug": "161-etheria-restart",
+    "name": "Etheria Restart",
+    "source": "games-completed",
+    "fazerTypes": [
+        "topup"
+    ],
+    "workbook": "games-completed/161-etheria-restart/161-etheria-restart.xlsx"
+}

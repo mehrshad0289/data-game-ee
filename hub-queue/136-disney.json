@@ -1,0 +1,9 @@
+{
+    "slug": "136-disney",
+    "name": "Disney",
+    "source": "games-completed",
+    "fazerTypes": [
+        "giftcard"
+    ],
+    "workbook": "games-completed/136-disney/136-disney.xlsx"
+}

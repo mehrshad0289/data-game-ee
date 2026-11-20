@@ -1,0 +1,9 @@
+{
+    "slug": "382-watcher-of-realms",
+    "name": "Watcher of Realms",
+    "source": "games-completed",
+    "fazerTypes": [
+        "topup"
+    ],
+    "workbook": "games-completed/382-watcher-of-realms/382-watcher-of-realms.xlsx"
+}

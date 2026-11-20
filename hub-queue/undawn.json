@@ -1,0 +1,9 @@
+{
+    "slug": "undawn",
+    "name": "Undawn",
+    "source": "fazer",
+    "fazerTypes": [
+        "giftcard",
+        "topup"
+    ]
+}

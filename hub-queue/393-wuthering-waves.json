@@ -1,0 +1,9 @@
+{
+    "slug": "393-wuthering-waves",
+    "name": "Wuthering Waves",
+    "source": "games-completed",
+    "fazerTypes": [
+        "topup"
+    ],
+    "workbook": "games-completed/393-wuthering-waves/393-wuthering-waves.xlsx"
+}

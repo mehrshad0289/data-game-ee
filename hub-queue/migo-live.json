@@ -1,0 +1,8 @@
+{
+    "slug": "migo-live",
+    "name": "Migo Live",
+    "source": "fazer",
+    "fazerTypes": [
+        "topup"
+    ]
+}

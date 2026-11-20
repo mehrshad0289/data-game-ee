@@ -1,0 +1,9 @@
+{
+    "slug": "202-honkai-impact-3rd",
+    "name": "Honkai Impact 3rd",
+    "source": "games-completed",
+    "fazerTypes": [
+        "topup"
+    ],
+    "workbook": "games-completed/202-honkai-impact-3rd/202-honkai-impact-3rd.xlsx"
+}

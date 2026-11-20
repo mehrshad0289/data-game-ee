@@ -1,0 +1,8 @@
+{
+    "slug": "mycard",
+    "name": "Mycard",
+    "source": "fazer",
+    "fazerTypes": [
+        "giftcard"
+    ]
+}

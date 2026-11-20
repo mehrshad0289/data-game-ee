@@ -1,0 +1,8 @@
+{
+    "slug": "xbox-game-pass",
+    "name": "Xbox Game Pass",
+    "source": "fazer",
+    "fazerTypes": [
+        "giftcard"
+    ]
+}

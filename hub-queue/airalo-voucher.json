@@ -1,0 +1,8 @@
+{
+    "slug": "airalo-voucher",
+    "name": "Airalo Voucher",
+    "source": "fazer",
+    "fazerTypes": [
+        "giftcard"
+    ]
+}

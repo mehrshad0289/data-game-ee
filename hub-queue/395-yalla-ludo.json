@@ -1,0 +1,9 @@
+{
+    "slug": "395-yalla-ludo",
+    "name": "Yalla Ludo",
+    "source": "games-completed",
+    "fazerTypes": [
+        "topup"
+    ],
+    "workbook": "games-completed/395-yalla-ludo/395-yalla-ludo.xlsx"
+}

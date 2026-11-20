@@ -1,0 +1,8 @@
+{
+    "slug": "sausage-man",
+    "name": "Sausage Man",
+    "source": "fazer",
+    "fazerTypes": [
+        "topup"
+    ]
+}

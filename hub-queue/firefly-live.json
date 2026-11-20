@@ -1,0 +1,8 @@
+{
+    "slug": "firefly-live",
+    "name": "Firefly Live",
+    "source": "fazer",
+    "fazerTypes": [
+        "topup"
+    ]
+}

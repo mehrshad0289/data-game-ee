@@ -1,0 +1,8 @@
+{
+    "slug": "bullet-echo",
+    "name": "Bullet Echo",
+    "source": "fazer",
+    "fazerTypes": [
+        "topup"
+    ]
+}

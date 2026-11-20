@@ -1,0 +1,8 @@
+{
+    "slug": "astropay",
+    "name": "Astropay",
+    "source": "fazer",
+    "fazerTypes": [
+        "giftcard"
+    ]
+}

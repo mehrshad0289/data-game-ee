@@ -1,0 +1,9 @@
+{
+    "slug": "free-fire",
+    "name": "Free Fire",
+    "source": "fazer",
+    "fazerTypes": [
+        "giftcard",
+        "topup"
+    ]
+}

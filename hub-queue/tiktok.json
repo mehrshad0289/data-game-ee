@@ -1,0 +1,9 @@
+{
+    "slug": "tiktok",
+    "name": "Tiktok",
+    "source": "games-completed",
+    "fazerTypes": [
+        "giftcard"
+    ],
+    "workbook": "games-completed/tiktok/tiktok.xlsx"
+}

@@ -1,0 +1,10 @@
+{
+    "slug": "290-pubg-mobile",
+    "name": "PUBG Mobile",
+    "source": "games-completed",
+    "fazerTypes": [
+        "giftcard",
+        "topup"
+    ],
+    "workbook": "games-completed/290-pubg-mobile/290-pubg-mobile.xlsx"
+}

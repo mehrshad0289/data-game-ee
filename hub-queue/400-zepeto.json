@@ -1,0 +1,9 @@
+{
+    "slug": "400-zepeto",
+    "name": "Zepeto",
+    "source": "games-completed",
+    "fazerTypes": [
+        "topup"
+    ],
+    "workbook": "games-completed/400-zepeto/400-zepeto.xlsx"
+}

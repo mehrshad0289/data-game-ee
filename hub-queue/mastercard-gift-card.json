@@ -1,0 +1,8 @@
+{
+    "slug": "mastercard-gift-card",
+    "name": "Mastercard Gift Card",
+    "source": "fazer",
+    "fazerTypes": [
+        "giftcard"
+    ]
+}

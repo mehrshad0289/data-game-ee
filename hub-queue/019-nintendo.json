@@ -1,0 +1,9 @@
+{
+    "slug": "019-nintendo",
+    "name": "Nintendo",
+    "source": "games-completed",
+    "fazerTypes": [
+        "giftcard"
+    ],
+    "workbook": "games-completed/019-nintendo/019-nintendo.xlsx"
+}

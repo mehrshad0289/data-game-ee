@@ -1,0 +1,8 @@
+{
+    "slug": "snowbreak-containment-zone",
+    "name": "Snowbreak Containment Zone",
+    "source": "fazer",
+    "fazerTypes": [
+        "topup"
+    ]
+}

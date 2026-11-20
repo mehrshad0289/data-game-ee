@@ -1,0 +1,9 @@
+{
+    "slug": "002-roblox",
+    "name": "Roblox",
+    "source": "games-completed",
+    "fazerTypes": [
+        "giftcard"
+    ],
+    "workbook": "games-completed/002-roblox/002-roblox.xlsx"
+}

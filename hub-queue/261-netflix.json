@@ -1,0 +1,9 @@
+{
+    "slug": "261-netflix",
+    "name": "Netflix",
+    "source": "games-completed",
+    "fazerTypes": [
+        "giftcard"
+    ],
+    "workbook": "games-completed/261-netflix/261-netflix.xlsx"
+}

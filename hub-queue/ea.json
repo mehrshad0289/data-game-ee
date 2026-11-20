@@ -1,0 +1,9 @@
+{
+    "slug": "ea",
+    "name": "EA",
+    "source": "fazer",
+    "fazerTypes": [
+        "gamekey",
+        "giftcard"
+    ]
+}

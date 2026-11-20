@@ -1,0 +1,10 @@
+{
+    "slug": "valorant",
+    "name": "Valorant",
+    "source": "games-completed",
+    "fazerTypes": [
+        "giftcard",
+        "topup"
+    ],
+    "workbook": "games-completed/valorant/valorant.xlsx"
+}

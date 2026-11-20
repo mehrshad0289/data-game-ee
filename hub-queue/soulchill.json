@@ -1,0 +1,9 @@
+{
+    "slug": "soulchill",
+    "name": "Soulchill",
+    "source": "fazer",
+    "fazerTypes": [
+        "giftcard",
+        "topup"
+    ]
+}

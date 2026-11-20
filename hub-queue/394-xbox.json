@@ -1,0 +1,10 @@
+{
+    "slug": "394-xbox",
+    "name": "Xbox",
+    "source": "games-completed",
+    "fazerTypes": [
+        "gamekey",
+        "giftcard"
+    ],
+    "workbook": "games-completed/394-xbox/394-xbox.xlsx"
+}

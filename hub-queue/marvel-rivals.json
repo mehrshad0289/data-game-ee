@@ -1,0 +1,9 @@
+{
+    "slug": "marvel-rivals",
+    "name": "Marvel Rivals",
+    "source": "games-completed",
+    "fazerTypes": [
+        "topup"
+    ],
+    "workbook": "games-completed/marvel-rivals/marvel-rivals.xlsx"
+}

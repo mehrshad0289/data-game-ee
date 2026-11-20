@@ -1,0 +1,9 @@
+{
+    "slug": "287-poppo-live",
+    "name": "Poppo Live",
+    "source": "games-completed",
+    "fazerTypes": [
+        "topup"
+    ],
+    "workbook": "games-completed/287-poppo-live/287-poppo-live.xlsx"
+}

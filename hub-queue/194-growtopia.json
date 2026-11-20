@@ -1,0 +1,9 @@
+{
+    "slug": "194-growtopia",
+    "name": "Growtopia",
+    "source": "games-completed",
+    "fazerTypes": [
+        "topup"
+    ],
+    "workbook": "games-completed/194-growtopia/194-growtopia.xlsx"
+}

@@ -1,0 +1,9 @@
+{
+    "slug": "248-mobile-legends",
+    "name": "Mobile Legends",
+    "source": "games-completed",
+    "fazerTypes": [
+        "topup"
+    ],
+    "workbook": "games-completed/248-mobile-legends/248-mobile-legends.xlsx"
+}

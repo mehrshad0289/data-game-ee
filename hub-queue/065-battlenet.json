@@ -1,0 +1,9 @@
+{
+    "slug": "065-battlenet",
+    "name": "Battlenet",
+    "source": "games-completed",
+    "fazerTypes": [
+        "giftcard"
+    ],
+    "workbook": "games-completed/065-battlenet/065-battlenet.xlsx"
+}

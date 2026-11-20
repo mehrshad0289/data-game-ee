@@ -1,0 +1,9 @@
+{
+    "slug": "163-eve-echoes",
+    "name": "Eve Echoes",
+    "source": "games-completed",
+    "fazerTypes": [
+        "topup"
+    ],
+    "workbook": "games-completed/163-eve-echoes/163-eve-echoes.xlsx"
+}

@@ -1,0 +1,9 @@
+{
+    "slug": "017-amazon",
+    "name": "Amazon",
+    "source": "games-completed",
+    "fazerTypes": [
+        "giftcard"
+    ],
+    "workbook": "games-completed/017-amazon/017-amazon.xlsx"
+}

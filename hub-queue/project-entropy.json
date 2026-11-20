@@ -1,0 +1,8 @@
+{
+    "slug": "project-entropy",
+    "name": "Project Entropy",
+    "source": "fazer",
+    "fazerTypes": [
+        "topup"
+    ]
+}

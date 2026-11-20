@@ -1,0 +1,9 @@
+{
+    "slug": "340-super-sus",
+    "name": "Super Sus",
+    "source": "games-completed",
+    "fazerTypes": [
+        "topup"
+    ],
+    "workbook": "games-completed/340-super-sus/340-super-sus.xlsx"
+}

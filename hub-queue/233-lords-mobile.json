@@ -1,0 +1,9 @@
+{
+    "slug": "233-lords-mobile",
+    "name": "Lords Mobile",
+    "source": "games-completed",
+    "fazerTypes": [
+        "topup"
+    ],
+    "workbook": "games-completed/233-lords-mobile/233-lords-mobile.xlsx"
+}

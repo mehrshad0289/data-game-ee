@@ -1,0 +1,8 @@
+{
+    "slug": "gamestop",
+    "name": "Gamestop",
+    "source": "fazer",
+    "fazerTypes": [
+        "giftcard"
+    ]
+}

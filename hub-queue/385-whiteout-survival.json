@@ -1,0 +1,9 @@
+{
+    "slug": "385-whiteout-survival",
+    "name": "Whiteout Survival",
+    "source": "games-completed",
+    "fazerTypes": [
+        "topup"
+    ],
+    "workbook": "games-completed/385-whiteout-survival/385-whiteout-survival.xlsx"
+}

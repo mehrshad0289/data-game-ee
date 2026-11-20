@@ -1,0 +1,9 @@
+{
+    "slug": "wild-rift",
+    "name": "Wild Rift",
+    "source": "fazer",
+    "fazerTypes": [
+        "giftcard",
+        "topup"
+    ]
+}

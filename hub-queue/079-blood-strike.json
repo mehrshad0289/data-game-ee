@@ -1,0 +1,9 @@
+{
+    "slug": "079-blood-strike",
+    "name": "Blood Strike",
+    "source": "games-completed",
+    "fazerTypes": [
+        "topup"
+    ],
+    "workbook": "games-completed/079-blood-strike/079-blood-strike.xlsx"
+}

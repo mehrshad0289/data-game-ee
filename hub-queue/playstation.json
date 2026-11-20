@@ -1,0 +1,9 @@
+{
+    "slug": "playstation",
+    "name": "Playstation",
+    "source": "games-completed",
+    "fazerTypes": [
+        "giftcard"
+    ],
+    "workbook": "games-completed/playstation/playstation.xlsx"
+}

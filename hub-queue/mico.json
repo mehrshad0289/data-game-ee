@@ -1,0 +1,8 @@
+{
+    "slug": "mico",
+    "name": "Mico",
+    "source": "fazer",
+    "fazerTypes": [
+        "topup"
+    ]
+}

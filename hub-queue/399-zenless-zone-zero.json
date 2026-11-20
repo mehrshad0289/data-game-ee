@@ -1,0 +1,9 @@
+{
+    "slug": "399-zenless-zone-zero",
+    "name": "Zenless Zone Zero",
+    "source": "games-completed",
+    "fazerTypes": [
+        "topup"
+    ],
+    "workbook": "games-completed/399-zenless-zone-zero/399-zenless-zone-zero.xlsx"
+}

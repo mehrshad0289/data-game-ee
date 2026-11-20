@@ -1,0 +1,8 @@
+{
+    "slug": "stormshot",
+    "name": "Stormshot",
+    "source": "fazer",
+    "fazerTypes": [
+        "topup"
+    ]
+}

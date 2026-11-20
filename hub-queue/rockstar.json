@@ -1,0 +1,8 @@
+{
+    "slug": "rockstar",
+    "name": "Rockstar",
+    "source": "fazer",
+    "fazerTypes": [
+        "gamekey"
+    ]
+}

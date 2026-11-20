@@ -1,0 +1,9 @@
+{
+    "slug": "imo",
+    "name": "Imo",
+    "source": "fazer",
+    "fazerTypes": [
+        "giftcard",
+        "topup"
+    ]
+}

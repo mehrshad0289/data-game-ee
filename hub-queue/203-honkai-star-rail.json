@@ -1,0 +1,9 @@
+{
+    "slug": "203-honkai-star-rail",
+    "name": "Honkai Star Rail",
+    "source": "games-completed",
+    "fazerTypes": [
+        "topup"
+    ],
+    "workbook": "games-completed/203-honkai-star-rail/203-honkai-star-rail.xlsx"
+}

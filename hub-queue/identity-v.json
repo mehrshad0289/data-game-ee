@@ -1,0 +1,9 @@
+{
+    "slug": "identity-v",
+    "name": "Identity V",
+    "source": "games-completed",
+    "fazerTypes": [
+        "topup"
+    ],
+    "workbook": "games-completed/identity-v/identity-v.xlsx"
+}

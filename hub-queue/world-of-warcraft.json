@@ -1,0 +1,9 @@
+{
+    "slug": "world-of-warcraft",
+    "name": "World of Warcraft",
+    "source": "games-completed",
+    "fazerTypes": [
+        "giftcard"
+    ],
+    "workbook": "games-completed/world-of-warcraft/world-of-warcraft.xlsx"
+}
