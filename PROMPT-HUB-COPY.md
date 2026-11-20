@@ -1,49 +1,110 @@
 # مأموریت جمع‌آوری سوال‌وجواب و توضیحات هاب از الدورادو
 
-هر بار **دقیقاً دو محصول**. هر محصول همهٔ هاب‌هایش. بعد از این دو تا **توقف**. محصول سوم را شروع نکن.
+این فایل را بخوان و **همین الان اجرا کن**. سؤال نپرس. صبر نکن.
 
-Repository: https://github.com/mehrshad0289/data-game-ee  
-Branch: `main`  
-مسیر محلی: `C:\Users\Asus\Desktop\charjino\data-game-ee`
+هر بار **دقیقاً دو محصول تصادفی**. هر محصول همهٔ هاب‌هایش. بعد از هر فایل **فوری پوش**. بعد از این دو محصول **توقف**. محصول سوم را شروع نکن.
 
-منبع متن فقط صفحهٔ زندهٔ https://www.eldorado.gg/ است. متن را از روی همان صفحه کپی کن. ترجمه نکن. خلاصه نکن. جمله‌ای که روی صفحه نیست ننویس.
+یک همکار همزمان روی `main` کار می‌کند. انتخاب **رندم** است. قبل از تحقیق claim را پوش کن. فایل همکار را بازنویس نکن. force-push نزن.
 
-استیم را برندار. اگر اسم محصول Steam است، همان فایل صف را حذف کن و بعدی را بردار.
+---
 
-## صف
+## گیت‌هاب — خودت وصل شو و خودت پول و پوش کن
 
-| پوشه | معنی |
+| | |
 |---|---|
-| `hub-queue/<slug>.json` | محصولی که هنوز تمام نشده. تمام‌شدن = حذف همین فایل |
-| `hub-claimed/<slug>.json` | همین الان دست یک نفر است. انتخابش نکن |
-| `hub-copy/<slug>/<hub>/` | خروجی همان هاب |
+| Repository | https://github.com/mehrshad0289/data-game-ee |
+| Branch | `main` |
+| مسیر | `C:\Users\Asus\Desktop\charjino\data-game-ee` |
+| توکن | یک خط داخل `C:\Users\Asus\Desktop\charjino\data-game-ee\.secrets\github.token` |
 
-۶۵۸ محصول در صف است: ۳۹۹ بازی `games-completed` (بدون استیم) و ۲۵۹ محصول فیزر که پوشهٔ بازی جدا ندارند. `fazerTypes` داخل JSON می‌گوید این محصول روی دیتابیس شارژینو شارژ (`topup`) یا گیفت (`giftcard`) یا کلید (`gamekey`) دارد.
+`git config` را عوض نکن. توکن را در گزارش، چت، remote دائمی، یا commit نگذار. `.secrets/` در gitignore است.
+
+PowerShell از همان پوشه:
+
+```powershell
+cd C:\Users\Asus\Desktop\charjino\data-game-ee
+git checkout main
+git remote set-url origin https://github.com/mehrshad0289/data-game-ee.git
+git fetch origin
+git pull --rebase origin main
+```
+
+پوش (هر بار همین الگو؛ توکن را چاپ نکن):
+
+```powershell
+$ask = Join-Path $env:TEMP 'data-game-ee-ask.cmd'
+Set-Content -Path $ask -Encoding ascii -Value "@echo off`r`ntype `"C:\Users\Asus\Desktop\charjino\data-game-ee\.secrets\github.token`""
+$env:GIT_ASKPASS = $ask
+$env:GIT_TERMINAL_PROMPT = '0'
+git -c credential.helper= pull --rebase origin main
+git -c credential.helper= push "https://x-access-token@github.com/mehrshad0289/data-game-ee.git" HEAD:main
+Remove-Item $ask -Force
+```
+
+اگر پوش رد شد: `git pull --rebase origin main`، تداخل را با نگه‌داشتن فایل همکار حل کن، دوباره پوش کن. اگر claim تو با claim همکار روی **همان slug** خورد، claim خودت را دور بینداز و دو محصول تصادفی **دیگر** بردار.
+
+منبع حقیقت GitHub `main` است، نه حافظه.
+
+---
+
+## صف و پیشرفت — همه همین را می‌بینند
+
+| پوشه / فایل | معنی |
+|---|---|
+| `hub-queue/<slug>.json` | هنوز تمام نشده. تمام = حذف همین فایل از صف و پوش |
+| `hub-claimed/<slug>.json` | الان دست یک نفر است. انتخابش نکن |
+| `hub-copy/<slug>/<hub>/` | خروجی همان هاب |
+| `PROGRESS.md` | عدد باقی / در حال کار / تمام‌شده روی `main` |
+
+بعد از هر `done` این را بزن و `PROGRESS.md` را در همان commit تمام‌شدن بگذار:
+
+```powershell
+php tools/hub-status.php
+```
+
+استیم را برندار. اگر slug شامل steam است، فایل صف را `git rm` کن، status را به‌روز کن، پوش کن، بعدی را بردار.
+
+`fazerTypes` داخل JSON صف می‌گوید روی دیتابیس شارژینو `topup` / `giftcard` / `gamekey` دارد. همهٔ محصولات صف باید پوشش داده شوند. محصول بدون صفحهٔ الدورادو هم تمام می‌شود: `missing.json`، بعد حذف از صف.
+
+---
+
+## انتخاب رندم — دقیقاً دو تا
+
+بعد از `git pull --rebase origin main`:
+
+```powershell
+php tools/hub-pick.php
+```
+
+خروجی دو slug است. فقط همان دو تا را claim کرده‌ای. **قبل از باز کردن الدورادو** آن دو فایل `hub-claimed` را commit و پوش کن.
+
+پیام: `claim: <slug1> <slug2>`
+
+اگر اسکریپت گفت `queue empty`، کار تمام است. گزارش بده و توقف کن.
+
+دستی از اول فهرست الفبا برندار. دو نفری که همزمان شروع کنند نباید همان دو اسم را بگیرند.
+
+---
 
 ## هاب‌های یک محصول
 
-اسم پوشه فقط یکی از این‌هاست:
+اسم پوشه فقط یکی از این‌هاست: `accounts` · `currency` · `items` · `top-ups` · `gift-cards`
 
-`accounts` · `currency` · `items` · `top-ups` · `gift-cards`
-
-هاب لازم را این‌طور بساز:
-
-1. اگر `workbook` دارد، شیت مشخصات را بخوان. ردیف اکانت → `accounts`. ردیف ارز → `currency`. ردیف آیتم → `items`.
+1. اگر `workbook` دارد، شیت مشخصات: اکانت → `accounts`، ارز → `currency`، آیتم → `items`.
 2. اگر `fazerTypes` شامل `topup` است → `top-ups`.
 3. اگر `fazerTypes` شامل `giftcard` یا `gamekey` است → `gift-cards`.
-4. روی الدورادو هر صفحهٔ دیگری از همین پنج نوع برای **همین اسم** دیدی، آن را هم اضافه کن.
+4. روی الدورادو صفحهٔ دیگری از همین پنج نوع برای **همین اسم** دیدی، آن را هم اضافه کن.
 
-اگر برای یک هاب لازم صفحهٔ همان محصول روی الدورادو نیست، `missing.json` بگذار. توضیح نساز.
+اگر آن هاب صفحه ندارد: `missing.json`. متن نساز.  
+اگر کل محصول هیچ صفحه‌ای ندارد: فقط `hub-copy/<slug>/missing.json`، بعد اسم را از صف پاک کن.
 
-اگر کل محصول روی الدورادو هیچ صفحه‌ای ندارد، فقط یک فایل:
+متن فقط از صفحهٔ زندهٔ https://www.eldorado.gg/ . ترجمه نکن. خلاصه نکن. جمله‌ای که روی صفحه نیست ننویس.
 
-`hub-copy/<slug>/missing.json`
-
-و بعد اسم را از صف پاک کن.
+---
 
 ## فایل‌ها
 
-`faq.json` وقتی صفحه هست:
+`faq.json` وقتی صفحه هست و سوال دارد:
 
 ```json
 {
@@ -58,7 +119,7 @@ Branch: `main`
 }
 ```
 
-اگر صفحه هست و بلوک سوال ندارد:
+صفحه هست و بلوک سوال ندارد:
 
 ```json
 {
@@ -83,9 +144,9 @@ PARAGRAPH COPIED FROM THE PAGE
 NEXT PARAGRAPH COPIED FROM THE PAGE
 ```
 
-خط اول همان `sourceUrl` است. بعد یک خط خالی. هر پاراگراف بلوک توضیحات پایین صفحه با یک خط خالی جدا شود. عنوان آگهی، قیمت و نام فروشنده توضیح نیست.
+خط اول همان URL. بعد یک خط خالی. هر پاراگراف با یک خط خالی جدا. عنوان آگهی و قیمت توضیح نیست.
 
-`missing.json` وقتی آن هاب صفحه ندارد:
+`missing.json`:
 
 ```json
 {
@@ -96,46 +157,35 @@ NEXT PARAGRAPH COPIED FROM THE PAGE
 }
 ```
 
-`sourceUrl` باید صفحه‌ای باشد که واقعاً باز کردی.
+---
 
-## ترتیب اجباری هر محصول
+## ترتیب اجباری
 
-این ترتیب را به هم نزن. توضیح را قبل از پوش سوال ننویس.
+توضیح را قبل از پوش سوال ننویس. تا پوش این قدم موفق نشده قدم بعد را شروع نکن.
 
-1. `git pull --rebase origin main`
-2. فایل‌های `hub-queue/*.json` را به ترتیب اسم بخوان.
-3. دو تای اول که در `hub-claimed/` نیستند را بردار.
-4. برای هر کدام `hub-claimed/<slug>.json` را بنویس (`claimedAt` به وقت UTC اضافه کن).
-5. **فقط همین دو claim** را commit و push کن. قبل از push موفق تحقیق نکن. اگر push رد شد، pull کن و دو تای آزاد بعدی را بردار.
-6. محصول اول:
-   1. اسم انگلیسی را از سلول «نام کانونیکال» همان xlsx بردار. اگر xlsx نیست، فیلد `name` صف را بگذار.
+1. وصل شو به گیت‌هاب. `main` را پول کن.
+2. `php tools/hub-pick.php` — دو محصول تصادفی.
+3. commit و **پوش claim**. تحقیق نکن تا پوش claim موفق شود.
+4. محصول اول:
+   1. اسم انگلیسی از سلول «نام کانونیکال» همان xlsx؛ اگر xlsx نیست از `name` صف.
    2. در https://www.eldorado.gg/ همان اسم را جستجو کن.
-   3. هاب‌های لازم را به ترتیب `accounts`، `currency`، `items`، `top-ups`، `gift-cards` انجام بده.
-   4. برای هر هاب:
-      - صفحه را باز کن.
-      - اگر صفحه نیست: `missing.json` را بنویس، commit، push. برو هاب بعد.
-      - اگر صفحه هست: `faq.json` را بنویس، commit، push.
-      - بعد `description.txt` را بنویس، commit، push.
-      - تا push این هاب تمام نشده هاب بعد را شروع نکن.
-   5. وقتی همهٔ هاب‌های لازم فایل دارند: `git rm` روی `hub-queue/<slug>.json` و `hub-claimed/<slug>.json`. commit. push.
-7. محصول دوم را با همین ترتیب انجام بده.
-8. گزارش بده و توقف کن.
+   3. هاب‌ها به ترتیب `accounts`، `currency`، `items`، `top-ups`، `gift-cards`.
+   4. هر هاب: صفحه را باز کن. نیست → `missing.json`، commit، پوش. هست → `faq.json`، commit، پوش، بعد `description.txt`، commit، پوش. تا پوش این هاب تمام نشده هاب بعد را شروع نکن.
+   5. همهٔ هاب‌های لازم که فایل دارند: `git rm` روی `hub-queue/<slug>.json` و `hub-claimed/<slug>.json`. `php tools/hub-status.php`. commit `done: <slug>`. پوش.
+5. محصول دوم: همان ترتیب از جمع‌آوری تا `done` و پوش.
+6. گزارش بده و توقف کن.
 
 ## Commit
 
-هر commit فقط فایل‌های همان قدم است. دو محصول در یک commit نباشند. سوال و توضیح یک هاب در یک commit نباشند.
+هر commit فقط همان قدم. دو محصول در یک commit نباشند. سوال و توضیح یک هاب در یک commit نباشند.
 
-پیام commit:
-
-- `claim: <slug>`
+- `claim: <slug1> <slug2>`
 - `faq: <slug> <hub>`
 - `description: <slug> <hub>`
 - `missing: <slug> <hub>`
 - `done: <slug>`
 
-قبل از هر push: `git pull --rebase origin main`.
-
-اگر push پسورد خواست، یک خط فایل `C:\Users\Asus\Desktop\charjino\data-game-ee\.secrets\github.token` را برای push همین ریپو استفاده کن. آن فایل و آن خط را commit نکن و در گزارش ننویس.
+قبل از هر پوش: `git pull --rebase origin main`.
 
 ## تمام‌شده یعنی
 
@@ -143,20 +193,24 @@ NEXT PARAGRAPH COPIED FROM THE PAGE
 - `sourceUrl` با `https://www.eldorado.gg/` شروع می‌شود.
 - `present: true` حداقل یک سوال و جواب کپی‌شده دارد.
 - `description.txt` خط اولش همان URL است و حداقل یک پاراگراف از صفحه دارد.
-- `hub-queue/<slug>.json` بعد از push موفق حذف شده است.
+- `hub-queue/<slug>.json` بعد از پوش موفق حذف شده است.
+- `PROGRESS.md` عدد جدید را نشان می‌دهد.
 
 اگر یکی از این‌ها نیست، اسم را از صف پاک نکن.
 
-## گزارش پایان دو محصول
+## گزارش پایان
 
-برای هر محصول: slug، اسم، هر هاب، URL، `present` یا `found: false`، hash کامیت‌ها.  
-تعداد فایل باقی‌مانده در `hub-queue`.  
+برای هر محصول: slug، اسم، هر هاب، URL، `present` یا `found: false`، hash.  
+از `PROGRESS.md`: باقی، در حال کار، تمام‌شده.  
 بعد توقف.
 
-## دستور شروع
+---
 
-1. `git pull --rebase origin main`
-2. دو محصول آزاد اول صف را claim کن و push کن.
-3. محصول اول را هاب‌به‌هاب جمع کن؛ بعد از هر `faq.json` یا `missing.json` push کن، بعد توضیحات را push کن، بعد اسم را از `hub-queue` پاک کن و push کن.
-4. محصول دوم، همان کار.
-5. گزارش و توقف.
+# شروع
+
+1. `cd C:\Users\Asus\Desktop\charjino\data-game-ee`
+2. به https://github.com/mehrshad0289/data-game-ee روی `main` وصل شو و پول کن.
+3. دو محصول تصادفی را با `php tools/hub-pick.php` بردار و claim را پوش کن.
+4. محصول اول را هاب‌به‌هاب جمع کن؛ بعد از هر faq یا missing پوش کن؛ بعد توضیحات را پوش کن؛ بعد از صف حذف کن، `PROGRESS.md` را به‌روز کن، پوش کن.
+5. محصول دوم، همان کار.
+6. گزارش و توقف.
